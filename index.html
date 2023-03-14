@@ -26,12 +26,6 @@
                     <img id="expandedImg" :src="img1" style="width: 100%;">
                 </div>
                 <div class="row">
-                    <!-- <div class="column" v-for="imge in images" :key="imge.img">
-                        <img @click="changeImg" :src="imge.img[0][1]" width="100%">
-                    </div>
-                    <div class="column" v-for="imge in images" :key="imge.id">
-                        <img :src="imge.img[0][1]" width="100%">
-                    </div> -->
                     <div class="column">
                         <img :src="img1" alt="" width="100%">
                     </div>
@@ -47,11 +41,18 @@
                 </div>
             </div>
             <div class="product-details">
-                <h1 class="barn-name">SNEAKER COMPANY</h1>
-                <h1>{{ product }}</h1>
-                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-                <p>$125.00</p>
-                <button>add to cart</button>
+                <div>
+                    <h1 class="barn-name">SNEAKER COMPANY</h1>
+                    <h1>{{ product }}</h1>
+                    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                    <div> <p>$125.00</p> </div>
+                </div>
+                <div class="cart-details">
+                    <div> <button v-on:click="decreamentProduct">-</button> </div>
+                    <div> <p>{{count}}</p> </div>
+                    <div> <button v-on:click="increamentProduct">+</button> </div>
+                    <div> <button>add to cart</button> </div>
+                </div>
             </div>
         </div>
     </div>

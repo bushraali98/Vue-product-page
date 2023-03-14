@@ -75,3 +75,19 @@ a:visited {
 .images {
     display: block;
 }
+
+.product-details {
+    width: 100%;
+}
+
+.cart-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cart-details > div {
+    flex-wrap: wrap;
+    width: 10%;
+    text-align: center;
+}
