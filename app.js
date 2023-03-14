@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         product: 'Fall Limited Edition Sneakers',
+        expandedImage: 'assets/img1.jpg', 
         img1: 'assets/img1.jpg',
         img2: 'assets/img2.jpg',
         img3: 'assets/img3.jpg',
@@ -16,6 +17,9 @@ var app = new Vue({
             if (this.count > 0 ) {
                 this.count -= 1
             }
+        },
+        updateImage(img) {
+            this.expandedImage = img 
         }
     }
 })
