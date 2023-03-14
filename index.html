@@ -5,8 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue product page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="app">
+        <div class="navbar">
+            <a id="logo" href="#index">Sneakers</a>
+            <a href="#index">Collections</a>
+            <a href="#index">Men</a>
+            <a href="#index">Women</a>
+            <a href="#index">About</a>
+            <a href="#index">Contact</a>
+        </div>
+        <div class="product">
+            <div class="images">
+                <div class="container">
+                    <img id="expandedImg" :src="img1" style="width: 100%;">
+                </div>
+                <div class="row">
+                    <!-- <div class="column" v-for="imge in images" :key="imge.img">
+                        <img @click="changeImg" :src="imge.img[0][1]" width="100%">
+                    </div>
+                    <div class="column" v-for="imge in images" :key="imge.id">
+                        <img :src="imge.img[0][1]" width="100%">
+                    </div> -->
+                    <div class="column">
+                        <img :src="img1" alt="" width="100%">
+                    </div>
+                    <div class="column">
+                        <img :src="img3" alt="" width="100%">
+                    </div>
+                    <div class="column">
+                        <img :src="img2" alt="" width="100%">
+                    </div>
+                    <div class="column"> 
+                        <img :src="img4" width="100%" height="123px">
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <h1 class="barn-name">SNEAKER COMPANY</h1>
+                <h1>{{ product }}</h1>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                <p>$125.00</p>
+                <button>add to cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
